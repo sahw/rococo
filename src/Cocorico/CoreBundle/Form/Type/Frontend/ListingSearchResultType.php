@@ -239,6 +239,15 @@ class ListingSearchResultType extends AbstractType
                 )
             );
         }
+
+        $builder->add(
+            'offerer',
+            'search',
+            array(
+                'label' => 'listing_search.form.offerer',
+                'required' => false
+            )
+        );
     }
 
     public function configureOptions(OptionsResolver $resolver)

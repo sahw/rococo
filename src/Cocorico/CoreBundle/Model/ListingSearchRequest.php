@@ -44,6 +44,7 @@ class ListingSearchRequest implements TranslationContainerInterface
     //todo: decouple category fields and delivery
     protected $categoriesFields;
     protected $delivery;
+    protected $offerer;
 
     public static $sortByValues = array(
         'recommended' => 'listing.search.sort_by.recommended',
@@ -386,6 +387,21 @@ class ListingSearchRequest implements TranslationContainerInterface
         $this->categoriesFields = $categoriesFields;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getOfferer()
+    {
+        return $this->offerer;
+    }
+
+    /**
+     * @param mixed $offerer
+     */
+    public function setOfferer($offerer)
+    {
+        $this->offerer = $offerer;
+    }
 
     /**
      * Remove some Object properties while serialisation

@@ -41,6 +41,24 @@
             </div>
         </div>
 
+        <div class="col">
+            <strong class="title">
+                {{ form_label(form.offerer, null, {
+                    'required': false
+                }) }}
+            </strong>
+
+            <div class="field-holder">
+                {{ form_widget(form.offerer, {
+                    'id': 'offerer',
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'listing_search.form.offerer'|trans
+                    }
+                }) }}
+            </div>
+        </div>
+
         <div class="col time">
             {#In case of modification don't forget to add fields "start, end AND nb_days" #}
             {{ form_widget(form.date_range) }}

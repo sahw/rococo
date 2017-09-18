@@ -183,6 +183,19 @@ class ListingSearchManager
                 ->setParameter("categories", $categories);
         }
 
+        //Offerer
+        $offerer = $listingSearchRequest->getOfferer();
+        if ($offerer) {
+            $queryBuilder
+                ->andWhere(
+                    $queryBuilder->expr()->like(
+                        $queryBuilder->expr()->concat('u.firstName', 'u.lastName'),
+                        ':offerer'
+                    )
+                )
+                ->setParameter('offerer', "%$offerer%");
+        }
+
         //Characteristics
         $characteristics = $listingSearchRequest->getCharacteristics();
         $characteristics = array_filter($characteristics);

@@ -21,7 +21,7 @@ class ListingSearchHomeType extends ListingSearchResultType
         parent::buildForm($builder, $options);
 
         $builder
-            ->remove('date_range')
+            //->remove('date_range')
             ->remove('price_range')
             ->remove('characteristics')
             ->remove('sort_by')

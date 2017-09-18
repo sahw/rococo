@@ -48,7 +48,9 @@ class ListingSearchController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $listingSearchRequest = $form->getData();
 
-            $results = $this->get("cocorico.listing_search.manager")->search(
+            /** @var \Cocorico\CoreBundle\Model\Manager\ListingSearchManager $searchManager */
+            $searchManager = $this->get("cocorico.listing_search.manager");
+            $results = $searchManager->search(
                 $listingSearchRequest,
                 $request->getLocale()
             );

@@ -5711,6 +5711,10 @@ span.btn:focus {
     width: 47px;
 }
 
+.home-page .form-category .col + .col {
+    float: left;
+}
+
 .form-category .title {
     float: left;
     width: 74px;
@@ -5808,7 +5812,7 @@ span.btn:focus {
     margin: 9px 7px 0 3px;
 }
 
-.form-category .form-holder .col.time .form-control {
+.form-category .date input, .form-category .form-holder .col.time .form-control {
     padding: 5px 5px;
     text-align: center;
     color: #c6ccd2;
