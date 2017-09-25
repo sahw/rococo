@@ -11,13 +11,9 @@
 {% block theme %}home-page{% endblock %}
 
 {% block layout %}
-    {% embed '@CocoricoCore/Frontend/layout.html.twig' %}
+    {% embed '@CocoricoCore/Frontend/Home/layout.html.twig' %}
 
         {% trans_default_domain 'cocorico_home' %}
-
-        {% block search_form %}
-            {{ render(controller('CocoricoCoreBundle:Frontend/ListingSearch:searchHomeForm')) }}
-        {% endblock %}
 
         {% block main %}
             <!-- visual -->
@@ -37,6 +33,9 @@
                             </div>
                         </div>
                     </div>
+                    {% block search_form %}
+                        {{ render(controller('CocoricoCoreBundle:Frontend/ListingSearch:searchHomeForm')) }}
+                    {% endblock %}
                 </div>
             </div>
 
