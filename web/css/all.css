@@ -2642,6 +2642,12 @@ input[type="button"].btn-block {
     color: #999999;
 }
 
+.dropdown-menu > li
+{
+    color: #3f3f3f;
+    text-align: left;
+}
+
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
     text-decoration: none;
